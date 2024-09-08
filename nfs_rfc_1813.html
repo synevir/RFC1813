@@ -4,9 +4,9 @@
 <!--This file was converted to xhtml by LibreOffice - see https://cgit.freedesktop.org/libreoffice/core/tree/filter/source/xslt for the code.-->
 
 <head profile="http://dublincore.org/documents/dcmi-terms/">
-    
+
     <title xml:lang="en-US"> NFS 3 (RFC-1813)</title>
-   
+
     <style>
         table {
             border-collapse: collapse;
@@ -1131,7 +1131,7 @@
         <p class="Pr_20_Text"> </p>
         <p class="Pr_20_Text">       check</p>
         <p class="Pr_20_Text">          TRUE, якщо сервер повинен перевірити, що guard.obj_ctime відповідає ctime для об’єкта; інакше FALSE.</p>
-        <p class="Pr_20_Text"/> </p>
+        <p class="Pr_20_Text"> </p>
         <p class="Pr_20_Text">   Клієнт може запросити, щоб сервер перевірив, чи перебуває об’єкт перед виконанням операції SETATTR в очікуваному стані. Для цього він встановлює аргументу guard.check значення TRUE, а клієнт передає значення часу в guard.obj_ctime. Якщо guard.check має значення TRUE, сервер має порівняти значення guard.obj_ctime із поточним ctime об’єкта. Якщо значення відрізняються, сервер повинен зберегти атрибути об’єкта та повернути статус NFS3ERR_NOT_SYNC. Якщо guard.check має значення FALSE, сервер цю перевірку не виконуватиме.</p>
         <p class="Pr_20_Text"> </p>
         <p class="Pr_20_Text">   Після успішного повернення SETATTR3res.status має значення NFS3_OK, а SETATTR3res.resok містить:</p>
@@ -3174,51 +3174,51 @@
             <p class="Pr_20_Text"> </p>
             <hr>
             <p class="Pr_20_Text"> </p>
-            
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
+
             <p class="P2" id="section_5">5 Додаток I: Протокол монтування (MOUNT)</p>
             <p class="Pr_20_Text"> </p>
             <p class="Pr_20_Text">   Зміни з протоколу NFS версії 2 на протокол NFS версії 3 вимагали внесення деяких змін у протокол MOUNT. Щоб задовольнити потреби протоколу NFS версії 3, була визначена нова версія протоколу MOUNT. Цей новий протокол задовольняє вимоги протоколу NFS версії 3 і відповідає деяким іншим поточним вимогам ринку.</p>
             <p class="Pr_20_Text"> </p>
             <p class="Pr_20_Text"> </p>
-            
-            
+
+
             <p class="P3" id="section_5.1">5.1 Інформація RPC</p>
             <p class="Pr_20_Text"> </p>
             <p class="P3">5.1.1 Автентифікація</p>
             <p class="Pr_20_Text"> </p>
             <p class="Pr_20_Text">   Служба MOUNT у процедурі NULL використовує AUTH_NONE. Для всіх інших процедур використовуються AUTH_UNIX, AUTH_SHORT, AUTH_DES або AUTH_KERB. Інші типи автентифікації можуть підтримуватися в майбутньому.</p>
             <p class="Pr_20_Text"> </p>
-            
-            
-            <p class="P3" id="section_5.2">5.1.2 Константи</p>
+
+
+            <p class="P3" id="section_5.1.2">5.1.2 Константи</p>
             <p class="Pr_20_Text"> </p>
             <p class="Pr_20_Text">    Це константи RPC, необхідні для виклику служби MOUNT. Вони подані в десятковому вигляді.</p>
             <p class="Pr_20_Text"> </p>
             <p class="Pr_20_Text">       PROGRAM 100005</p>
             <p class="Pr_20_Text">       VERSION 3</p>
             <p class="Pr_20_Text"> </p>
-            
-            
+
+
             <p class="P3" id="section_5.1.3">5.1.3 Транспортна адреса</p>
             <p class="Pr_20_Text"> </p>
             <p class="Pr_20_Text">    Служба MOUNT зазвичай підтримується через протоколи TCP і UDP. У демона rpcbind слід запитати правильну транспортну адресу.</p>
             <p class="Pr_20_Text"> </p>
-            
-            
+
+
             <p class="P3" id="section_5.1.4">5.1.4 Розміри</p>
             <p class="Pr_20_Text"> </p>
             <p class="Pr_20_Text">   const MNTPATHLEN = 1024;  /* Максимальна кількість байтів в імені шляху */</p>
             <p class="Pr_20_Text">   const MNTNAMLEN  = 255;   /* Максимальна кількість байтів в імені */</p>
             <p class="Pr_20_Text">   const FHSIZE3    = 64;    /* Максимальна кількість байтів в V3 файловому дескрипторі */</p>
             <p class="Pr_20_Text"> </p>
-            
-            
+
+
             <p class="P3" id="section_5.1.5">5.1.5 Основні типи даних</p>
             <p class="Pr_20_Text"> </p>
             <p class="Pr_20_Text">   typedef opaque fhandle3&lt;FHSIZE3&gt;;</p>
@@ -3737,10 +3737,9 @@
             <p class="Pr_20_Text"> </p>
             <p class="Pr_20_Text"> </p>
             <p class="Pr_20_Text"> </p>
-            
-            
-            
-            
+
+
+
             <p class="P2" id="section_8">8. Міркування щодо безпеки</p>
             <p class="Pr_20_Text"> </p>
             <p class="Pr_20_Text">   Оскільки конфіденційні файли можуть передаватися або отримуватися від сервера за допомогою протоколу NFS, проблеми автентифікації, конфіденційності та цілісності даних повинні вирішуватися за допомогою реалізації цього протоколу.</p>
@@ -3749,19 +3748,18 @@
             <p class="Pr_20_Text"> </p>
             <p class="Pr_20_Text"> </p>
             <p class="Pr_20_Text"> </p>
-            
-            
-            
+
+
             <p class="P2" id="section_9">9. Подяки</p>
             <p class="Pr_20_Text"> </p>
             <p class="Pr_20_Text">    Цей опис протоколу взято з оригінального документа, написаного Брайаном Павловським і переглянутого Пітером Штаубахом. Цей протокол є результатом спільних зусиль Джеффа Арнольда, Брента Каллагена, Джона Корбіна, Фреда Гловера, Чета Ющака, Майка Ейслера, Джона Гіллоно, Дейва Хітца, Майка Купфера, Ріка Маклема, Рона Мінніха, Браяна Павловскі, Девід Робінсон, Расті Сендберг, Крейг Шемп, Спенсер Шеплер, Карл Сміт, Марк Стайн, Пітер Стаубах, Том Телпі, Роб Терлоу та Марк Віттл.</p>
             <p class="Pr_20_Text"> </p>
             <p class="Pr_20_Text"> </p>
             <p class="Pr_20_Text"> </p>
-            
-            
-            
-            
+
+
+
+
             <p class="P2" id="section_10">10. Адреси авторів</p>
             <p class="Pr_20_Text"> </p>
             <p class="Pr_20_Text">   Надсилайте коментарі щодо цього протоколу на адресу:</p>
